@@ -1,7 +1,7 @@
+#pragma once
 #include "typesDef.h"
 
-
-class hp {
+class healthPoints {
 public:
 	//returns TRUE if set successfully
 	bool setMaxHP(ui16 newMaxHP) {
@@ -42,8 +42,11 @@ public:
 		currentHP += amount;
 	}
 
-	hp() { currentHP = 1; maxHP = 1; }
-	hp(ui16 cHP,ui16 mHP) {
+	healthPoints() { 
+		currentHP = 1; 
+		maxHP = 1;
+	}
+	healthPoints(ui16 cHP,ui16 mHP) {
 		currentHP = cHP;
 		maxHP = mHP;
 		if (currentHP > maxHP)
@@ -52,7 +55,6 @@ public:
 
 
 private:
-
 	ui16 currentHP;
 	ui16 maxHP;
 };
